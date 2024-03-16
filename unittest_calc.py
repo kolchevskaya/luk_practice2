@@ -44,7 +44,13 @@ class TestCalculator(unittest.TestCase):
         result = self.calculate_operation("Квадратный корень", 9, 0)
         self.assertAlmostEqual(result, 3.0)
 
+    def test_floor(self):
+        result = self.calculate_operation("Округление в меньшую сторону", 3.5, 0)
+        self.assertEqual(result, 3)
 
+    def test_ceil(self):
+        result = self.calculate_operation("Округление в большую сторону", 3.2, 0)
+        self.assertEqual(result, 4)
 
     def calculate_operation(self, operation, num1, num2):
         entry_num1 = num1
@@ -71,7 +77,11 @@ class TestCalculator(unittest.TestCase):
             result = math.cos(num1)
         elif operation == "Квадратный корень":
             result = math.sqrt(num1)
-       
+        elif operation == "Округление в меньшую сторону":
+            result = math.floor(num1)
+        elif operation == "Округление в большую сторону":
+            result = math.ceil(num1)
+
         return result
 
 
