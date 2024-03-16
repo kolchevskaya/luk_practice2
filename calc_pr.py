@@ -2,8 +2,9 @@ import tkinter as tk
 from tkinter import messagebox
 import math
 
-
 def calculate():
+    operation = operation_var.get()
+    
     if operation in ["Sin", "Cos", "Квадратный корень", "Округление в меньшую сторону", "Округление в большую сторону"]:
         num1 = float(entry_num1.get())
         if operation == "Sin":
@@ -16,6 +17,8 @@ def calculate():
             result = math.floor(num1)
         elif operation == "Округление в большую сторону":
             result = math.ceil(num1)
+            
+        result_label.config(text="Результат: " + str(result))
         
     else:
         num1 = float(entry_num1.get())
@@ -37,8 +40,8 @@ def calculate():
             result = num1 % num2
         elif operation == "Возведение в степень":
             result = num1 ** num2
-
-             result_label.config(text="Результат: " + str(result))
+        
+        result_label.config(text="Результат: " + str(result))
 
 def show_input_fields():
     operation = operation_var.get()
