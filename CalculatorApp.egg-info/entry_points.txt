@@ -1,0 +1,2 @@
+[console_scripts]
+calculator = calc_pr:main
