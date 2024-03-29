@@ -20,4 +20,4 @@ python setup.py bdist_wheel
 echo "Installing the application..."
 pip install dist/CalculatorApp-1.0-py3-none-any.whl
 
-echo "Continuous Integration process completed successfully."
+echo "Continuous Integration process completed successfully"
