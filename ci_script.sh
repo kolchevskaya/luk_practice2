@@ -8,4 +8,16 @@ git pull
 echo "Building the project..."
 python setup.py build
 
+# Запуск unittest
+echo "Running unit tests..."
+python unittest_calc.py
 
+# Создание установщика
+echo "Creating the installer..."
+python setup.py bdist_wheel
+
+# Установка приложения
+echo "Installing the application..."
+pip install dist/CalculatorApp-1.0-py3-none-any.whl
+
+echo "Continuous Integration process completed successfully"
