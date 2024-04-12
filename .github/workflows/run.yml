@@ -30,7 +30,7 @@ jobs:
 
     - name: Build installer
       run: |
-        python setup.py sdist bdist_wheel
+        python setup.py sdist
 
     - name: Install application
       run: |
