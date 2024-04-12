@@ -19,7 +19,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11.5'
+        python-version: '3.10'
 
     - name: Install dependencies
       run: pip install -r reqirements.txt
@@ -34,7 +34,7 @@ jobs:
 
     - name: Install application
       run: |
-        pip install calc.py
+        pip install calc_pr.py
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
