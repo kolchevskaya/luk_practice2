@@ -10,8 +10,7 @@ setup(
         ],
     },
     install_requires=[
-        'tkinter',
-        'math',
+        
     ],
     author='Mary, Andrey',
     author_email='kolchevskayaam@email.com',
